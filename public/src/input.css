@@ -11,7 +11,14 @@
     src: url("./../fonts/YekanBakhFaNum-Bold.woff") format("woff");
 }  
 
+@font-face {
+    font-family: poppins;
+    src: url("./../fonts/Poppins-Regular.woff") format("woff");
+}  
+
 @theme{
+    --font-ltr:"poppins","yekanBakh";
+    --font-rtl:"yekanBakh","poppins";
 
     --color-primary:#3B82F6;
 

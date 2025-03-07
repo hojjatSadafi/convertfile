@@ -6,7 +6,7 @@
     <title>File converter</title>
     <link rel="stylesheet" href="style/app.css">
 </head>
-<body class="bg-background dark:bg-darkBackground text-textColor dark:text-darkTextColor pt-12 pb-6 min-h-screen bg-[url(../images/topographyLight.svg)] dark:bg-[url(../images/topographyDark.svg)] font-yekanbakh">
+<body class="bg-background dark:bg-darkBackground text-textColor dark:text-darkTextColor pt-12 pb-6 min-h-screen bg-[url(../images/topographyLight.svg)] dark:bg-[url(../images/topographyDark.svg)] rtl:font-rtl ltr:font-ltr">
     <!-- svgs -->
      <svg class="hidden">
         <symbol id="chevron-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
@@ -17,6 +17,12 @@
         <symbol id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
         </symbol>
         <symbol id="file-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/>
+        </symbol>
+        <symbol id="file-plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-plus"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M9 15h6"/><path d="M12 18v-6"/>
+        </symbol>
+        <symbol id="arrow-left-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
+        </symbol>
+        <symbol id="arrow-right-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
         </symbol>
     </svg>
     <!-- header -->
@@ -67,7 +73,66 @@
             
         </form>
     </section>
-    
+
+    <!-- result section -->
+    <section class="container px-4 mt-10">
+        <form class="">
+            <label for="file-upload-input" class="flex gap-1.5 bg-surface-300 dark:bg-darksurface-400 w-max text-primary text-lg py-2 px-2.5 rtl:rounded-tr-md ltr:rounded-tl-md rtl:rounded-tl-4xl ltr:rounded-tr-4xl cursor-pointer">
+                <svg class="w-6 h-6"><use href="#file-plus-icon"></use></svg>
+                <span>اضافه کردن فایل</span>
+            </label>
+            <!-- records -->
+            <div> <!-- this div is for curving the first item from results -->
+                <div class="flex justify-between w-full gap-0.5 items-center sm:text-xl bg-surface-400 dark:bg-darksurface-500 p-3 rtl:first:rounded-tl-md ltr:first:rounded-tr-md">
+                    <div class="flex items-center gap-2 sm:gap-6 md:gap-12 lg:gap-20">
+                        <!-- title -->
+                        <span class="break-words">my image.jpg</span>
+                        <span class="text-sm text-thinTextColor dark:text-darkThinTextColor">به</span>
+                        <select name="" id="" class="border-none outline-none">
+                            <option value="png" class="dark:bg-darksurface-400">PNG</option>
+                            <option value="svg" class="dark:bg-darksurface-400">SVG</option>
+                            <option value="jpeg" class="dark:bg-darksurface-400">jpeg</option>
+                        </select>
+                    </div>
+                    <!-- ready or not -->
+                    <!-- <span class="hidden sm:block text-lg border-2 text-primary border-primary py-1 px-1 sm:px-3 rounded w-max text-center">آماده</span>
+                    <span class="w-4 h-4 sm:hidden bg-primary rounded-full"></span> -->
+                    <span class="hidden sm:block text-lg border-2 text-rose-500 border-rose-500 py-1 px-1 sm:px-3 rounded w-max text-center">آماده نیست</span>
+                    <span class="w-4 h-4 sm:hidden bg-rose-500 rounded-full"></span>
+                    <!-- size -->
+                    <span class="text-nowrap">165 kb</span>
+                </div>
+                <div class="flex justify-between gap-0.5 w-full items-center sm:text-xl bg-surface-400 dark:bg-darksurface-500 p-3 rtl:first:rounded-tl-md ltr:first:rounded-tr-md">
+                    <div class="flex items-center gap-2 sm:gap-6 md:gap-12 lg:gap-20">
+                        <!-- title -->
+                        <span class="break-words">duble image.jpg</span>
+                        <span class="text-sm text-thinTextColor dark:text-darkThinTextColor">به</span>
+                        <select name="" id="" class="border-none outline-none">
+                            <option value="png" class="dark:bg-darksurface-400">PNG</option>
+                            <option value="svg" class="dark:bg-darksurface-400">SVG</option>
+                            <option value="jpeg" class="dark:bg-darksurface-400">jpeg</option>
+                        </select>
+                    </div>
+                    <!-- ready or not -->
+                    <span class="hidden sm:block text-lg border-2 text-primary border-primary py-1 px-1 sm:px-3 rounded w-max text-center">آماده</span>
+                    <span class="w-4 h-4 sm:hidden bg-primary rounded-full"></span>
+                    <!-- <span class="hidden sm:block text-lg border-2 text-rose-500 border-rose-500 py-1 px-1 sm:px-3 rounded w-max text-center">آماده نیست</span>
+                    <span class="w-4 h-4 sm:hidden bg-rose-500 rounded-full"></span> -->
+                    <!-- size -->
+                    <span class="text-nowrap">200 kb</span>
+                </div>
+            </div>
+            <div class="flex justify-between items-center bg-surface-300 dark:bg-darksurface-400 p-3 rounded-b-md">
+                <div class=""><span>2</span> فایل اضافه شده</div>
+                <button type="submit" class="bg-textColor dark:bg-darkTextColor text-darkTextColor dark:text-textColor flex items-center gap-1 px-2 py-1 font-bold rounded">
+                    <span>تبدیل</span>
+                    <svg class="w-7 h-7 hidden rtl:block"><use href="#arrow-left-icon"></use></svg>
+                    <svg class="w-7 h-7 hidden ltr:block"><use href="#arrow-right-icon"></use></svg>
+                </button>
+            </div>
+        </form>
+    </section>
+
     <!-- options section -->
     <section class="mt-10 bg-background dark:bg-darkBackground custom-shadow">
         <div class="container py-8 space-y-6">
