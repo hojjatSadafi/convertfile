@@ -12,9 +12,11 @@
         <symbol id="chevron-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
         </symbol>
-        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-        </svg>
+        <symbol id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+        </symbol>
         <symbol id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+        </symbol>
+        <symbol id="file-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/>
         </symbol>
     </svg>
     <!-- header -->
@@ -26,10 +28,10 @@
                 <div class="lang-dropDown-btn flex gap-3 items-center cursor-pointer">
                     <img src="images/Flag_of_Iran.svg.png" alt="" class="w-8 rounded-xs">
                     <span class="font-bold">فارسی</span>
-                    <svg class="w-6 h-6"><use href="#chevron-down"></use></svg>
+                    <svg class="w-6 h-6 transition-transform duration-200"><use href="#chevron-down"></use></svg>
                 </div>
                 <!-- drop down content -->
-                <div class="lang-dropDown-content min-w-full h-max absolute right-0 top-[120%] p-2 rounded bg-surface-500 dark:bg-darksurface-400 space-y-2 transition-all hide">
+                <div class="lang-dropDown-content min-w-full h-max absolute right-0 left-0 top-[120%] p-2 rounded bg-surface-500 dark:bg-darksurface-400 space-y-2 transition-all hide">
                     <a href="#" class="flex items-center gap-1">
                         <img src="images/Flag_of_Iran.svg.png" alt="" class="w-8 rounded-xs">
                         <span class="font-bold">فارسی</span>
@@ -53,6 +55,16 @@
             <img src="images/logo.png" alt="" class="select-none w-18">
         </a>
     </header>
+
+    <section class="mt-10 px-2">
+        <h1 class="text-center text-4xl font-bold">کانورتر فایل</h1>
+        <!-- upload window -->
+        <form action="" class="flex flex-col justify-center items-center gap-6 bg-surface-500 dark:bg-darksurface-500 max-w-150 mx-auto rounded-lg py-16 mt-6">
+            <svg class="w-12 md:w-16 h-12 md:h-16"><use href="#file-icon"></use></svg>
+            <label for="file-upload-input" class="bg-primary px-6 py-3 rounded text-center cursor-pointer font-bold text-lg">فایل خود را انتخاب کنید</label>
+            <input type="file" hidden id="file-upload-input" multiple>
+        </form>
+    </section>
 
     <script src="js/app.js"></script>
 </body>

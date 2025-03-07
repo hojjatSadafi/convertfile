@@ -32,6 +32,7 @@
         // funcs
         function toggleLangDropDown(){
             langDropDownContent.classList.toggle('hide')
+            langDropDownBtn.children[2].classList.toggle('rotate-180') // rotate the arrow
         }
 
         // event
