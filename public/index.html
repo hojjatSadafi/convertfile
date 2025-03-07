@@ -60,10 +60,11 @@
     <section class="mt-10 px-2">
         <h1 class="text-center text-3xl sm:text-4xl font-bold">کانورتر فایل</h1>
         <!-- upload window -->
-        <form action="" class="flex flex-col justify-center items-center gap-6 bg-surface-400 dark:bg-darksurface-500 max-w-150 mx-auto rounded-lg py-16 mt-6">
+        <form action="" id="drop-window" class="flex flex-col justify-center items-center gap-6 bg-surface-400 dark:bg-darksurface-500 max-w-150 mx-auto rounded-lg py-16 mt-6 relative">
             <svg class="w-12 md:w-16 h-12 md:h-16"><use href="#file-icon"></use></svg>
             <label for="file-upload-input" class="bg-primary text-darkTextColor px-6 py-3 rounded text-center cursor-pointer font-bold text-lg">فایل خود را انتخاب کنید</label>
             <input type="file" hidden id="file-upload-input" multiple>
+            
         </form>
     </section>
     
@@ -101,7 +102,7 @@
                         <span>فایل خود را بارگیری کنید</span>
                     </div>
                 </div>
-                <img src="images/detail-section-pic.png" alt="" class="max-w-52 md:max-w-100">
+                <img src="images/detail-section-pic.png" alt="" class="max-w-52 md:max-w-100 lg:max-w-130">
             </div>
         </div>
     </section>

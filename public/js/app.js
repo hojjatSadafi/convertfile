@@ -39,3 +39,22 @@
         langDropDownBtn.addEventListener('click',toggleLangDropDown)
 
 
+// drag and drop
+
+        // vars
+        const dropWindow = document.getElementById('drop-window')
+
+        // funcs
+
+        // events
+        dropWindow.addEventListener('dragover',event=>{
+            event.preventDefault()
+            dropWindow.classList.add('droping')
+        })
+        
+        dropWindow.addEventListener('drop',()=>{
+            dropWindow.classList.remove('droping')
+        })
+        dropWindow.addEventListener('dragleave',()=>{
+            dropWindow.classList.remove('droping')
+        })
