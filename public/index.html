@@ -6,7 +6,7 @@
     <title>File converter</title>
     <link rel="stylesheet" href="style/app.css">
 </head>
-<body class="bg-background dark:bg-darkBackground text-textColor dark:text-darkTextColor pt-12 min-h-screen bg-[url(../images/topographyLight.svg)] dark:bg-[url(../images/topographyDark.svg)] font-yekanbakh">
+<body class="bg-background dark:bg-darkBackground text-textColor dark:text-darkTextColor pt-12 pb-6 min-h-screen bg-[url(../images/topographyLight.svg)] dark:bg-[url(../images/topographyDark.svg)] font-yekanbakh">
     <!-- svgs -->
      <svg class="hidden">
         <symbol id="chevron-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
@@ -106,11 +106,61 @@
         </div>
     </section>
 
-    <!--  -->
+    <!-- cards section -->
+    <section class="container mt-16">
+        <!-- grid container -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- cards -->
+            <div class="bg-surface-400 dark:bg-darksurface-500 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-1">
+                    <img src="images/squre.svg" alt="" class="w-12 h-12">
+                    <span class="text-xl font-bold">پی دی اف هایتان را در یک جا ادغام کنید</span>
+                </div>
+                <p>قراردادها، گزارش‌ها یا ارائه‌های خود را به راحتی در یک PDF ادغام کنید تا همه چیز را مرتب و در دسترس نگه دارید.</p>
+            </div>
+            <div class="bg-surface-400 dark:bg-darksurface-500 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-1">
+                    <img src="images/monitor.svg" alt="" class="w-12 h-12">
+                    <span class="text-xl font-bold">پایگاه داده فرم های مالیاتی</span>
+                </div>
+                <p>ما صدها فرم مالیات، بیمه و سایر فرم‌ها را در یک مکان جمع‌آوری کرده‌ایم تا به شما کمک کنیم آن‌ها را به راحتی پیدا و ویرایش کنید.</p>
+            </div>
+            <div class="bg-surface-400 dark:bg-darksurface-500 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-1">
+                    <img src="images/clock.svg" alt="" class="w-12 h-12">
+                    <span class="text-xl font-bold">تبدیل سریع</span>
+                </div>
+                <p>تبدیل از PDF یا بالعکس به طور متوسط ​​حدود 5 ثانیه طول می کشد. اکنون فایل خود را آپلود کنید و خودتان ببینید!</p>
+            </div>
+            <div class="bg-surface-400 dark:bg-darksurface-500 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-1">
+                    <img src="images/password-protection.svg" alt="" class="w-12 h-12">
+                    <span class="text-xl font-bold">حفاظت از رمز عبور</span>
+                </div>
+                <p>اگر می‌خواهید از باز کردن، ویرایش یا چاپ اسنادتان توسط دیگران جلوگیری کنید، می‌توانید آنها را قفل کنید و دسترسی را کنترل کنید.</p>
+            </div>
+            <div class="bg-surface-400 dark:bg-darksurface-500 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-1">
+                    <img src="images/laptop.svg" alt="" class="w-12 h-12">
+                    <span class="text-xl font-bold">فشرده سازی حجم فایل PDF</span>
+                </div>
+                <p>سایت ما فایل‌های شما را بهینه می‌کند تا اشتراک‌گذاری و ذخیره آن‌ها را آسان‌تر کند، همگی با حفظ کیفیت اصلی‌شان.</p>
+            </div>
+            <div class="bg-surface-400 dark:bg-darksurface-500 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-1">
+                    <img src="images/pen.svg" alt="" class="w-12 h-12">
+                    <span class="text-xl font-bold">امضای الکترونیکی آسان</span>
+                </div>
+                <p>ما 3 راه برای امضای اسناد PDF ارائه می دهیم. می توانید امضای خود را به صورت تصویر بکشید، تایپ کنید یا آپلود کنید.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- start now section -->
     <section class="container mt-16">
         <div class="md:h-4/5 relative flex flex-col md:flex-row justify-between items-center rounded-lg gap-2 sm:gap-0 bg-gradient-to-l from-[#234C90] rtl:from-primary to-primary rtl:to-[#234C90] py-12 px-10">
             <div class="text-darkTextColor space-y-5 max-w-100 relative z-10 text-center md:text-start">
-                <h3 class="text-xl md:text-3xl font-bold">همین حالا شروع کنید!</h3>
+                <h3 class="text-xl md:text-3xl font-bold ltr:tracking-widest">همین حالا شروع کنید</h3>
                 <p class="text-lg">سرعت <span class="font-bold">تبدیل</span> فایل های خود را به صورت <span class="font-bold">رایگان</span> تجربه کنید.</p>
             </div>
             <a href="" class="py-5 px-4.5 bg-darkTextColor text-textColor font-bold rounded text-base relative z-10">شروع تبدیل</a>
@@ -120,7 +170,6 @@
             <div class="absolute end-6 sm:end-1/4 top-6 sm:top-10 z-0 bg-[#61a6fa99] w-12 h-12 rounded-full"></div>
         </div>
     </section>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script src="js/app.js"></script>
 </body>
 </html>
