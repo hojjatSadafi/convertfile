@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File converter</title>
+    <link rel="stylesheet" href="style/app.css">
+</head>
+<body class="bg-background dark:bg-darkBackground text-textColor dark:text-darkTextColor pt-12 min-h-screen bg-[url(../images/topographyLight.svg)] dark:bg-[url(../images/topographyDark.svg)] font-yekanbakh">
+    <!-- svgs -->
+     <svg class="hidden">
+        <symbol id="chevron-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </symbol>
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+        </svg>
+        <symbol id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+        </symbol>
+    </svg>
+    <!-- header -->
+    <header class="container bg-surface-500/30 dark:bg-darksurface-400/50 backdrop-blur-xs md:py-2 lg:py-4 md:px-8 lg:px-10 w-11/12 sm:w-full rounded-3xl flex justify-between items-center">
+        <div class="flex gap-2">
+            <!-- dropDodwn -->
+            <div class="relative select-none">
+                <!-- dropdown head -->
+                <div class="lang-dropDown-btn flex gap-3 items-center cursor-pointer">
+                    <img src="images/Flag_of_Iran.svg.png" alt="" class="w-8 rounded-xs">
+                    <span class="font-bold">فارسی</span>
+                    <svg class="w-6 h-6"><use href="#chevron-down"></use></svg>
+                </div>
+                <!-- drop down content -->
+                <div class="lang-dropDown-content min-w-full h-max absolute right-0 top-[120%] p-2 rounded bg-surface-500 dark:bg-darksurface-400 space-y-2 transition-all hide">
+                    <a href="#" class="flex items-center gap-1">
+                        <img src="images/Flag_of_Iran.svg.png" alt="" class="w-8 rounded-xs">
+                        <span class="font-bold">فارسی</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-1">
+                        <img src="images/Flag_of_the_United_States_(1912-1959).svg.png" alt="" class="w-8 rounded-xs">
+                        <span class="font-bold">English</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-1">
+                        <img src="images/Flag_of_Saudi_Arabia.svg.png" alt="" class="w-8 rounded-xs">
+                        <span class="font-bold">العربی</span>
+                    </a>
+                </div>
+            </div>
+            <!-- theme change handler -->
+            <svg class="change-theme-btn dark:hidden w-6 h-6 cursor-pointer"><use href="#moon-icon"></use></svg>
+            <svg class="change-theme-btn hidden dark:block w-6 h-6 cursor-pointer"><use href="#sun-icon"></use></svg>
+        </div>
+        <!-- logo -->
+        <a href="#">
+            <img src="images/logo.png" alt="" class="select-none w-18">
+        </a>
+    </header>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
